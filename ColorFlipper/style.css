@@ -1,0 +1,84 @@
+:root {
+  --primary-color: rgb(17, 142, 158);
+  --secondary-color: rgb(108, 108, 248);
+  --background-color: rgba(0, 0, 0, 0.8);
+  --border-color: 2px solid rgb(170, 164, 164);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  align-items: start;
+  grid-template-rows: 40px calc(100vh - 40px);
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+header nav ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  list-style-type: none;
+  justify-items: center;
+  padding: 0.4rem 1rem;
+  background-color: white;
+}
+
+header nav ul li {
+  font-size: 20px;
+}
+
+header nav ul li div {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+}
+
+header nav ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+header nav ul li:first-child {
+  color: var(--primary-color);
+}
+
+main {
+  display: grid;
+  place-items: center;
+  align-content: center;
+  row-gap: 10px;
+  padding: 0.3rem;
+  background-color: AliceBlue;
+  height: 100%;
+}
+main h1 {
+  width: fit-content;
+  font-size: 25px;
+  padding: 0.4rem 1rem;
+  border-radius: 5px;
+  color: white;
+  background-color: var(--background-color);
+}
+
+main h1 span {
+  margin: 0 5px;
+  color: var(--secondary-color);
+}
+
+main button {
+  width: 100px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0.5rem 0.8rem;
+  border: none;
+  border-radius: 5px;
+  border: var(--border-color);
+  cursor: pointer;
+  background-color: transparent;
+}
