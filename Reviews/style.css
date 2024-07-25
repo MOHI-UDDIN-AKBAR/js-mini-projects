@@ -1,6 +1,6 @@
 :root {
   --primary-color: #1f2633;
-  --secondary-color: rgb(144, 144, 228);
+  --secondary-color: rgb(70, 70, 165);
 }
 
 * {
@@ -47,9 +47,12 @@ main > h1 > span {
   margin-top: 35px;
 }
 
-.review-card > img {
-  width: 60px;
-  height: 60px;
+.container {
+  display: grid;
+  justify-items: center;
+}
+
+.review-card .container > img {
   object-fit: cover;
   border-radius: 50%;
 }
@@ -73,7 +76,7 @@ main > h1 > span {
   text-transform: uppercase;
 }
 
-.review-card > p {
+.review-card .container > p {
   display: grid;
   place-items: center;
   line-height: 20px;
@@ -87,7 +90,7 @@ main > h1 > span {
   grid-template-columns: 1fr 1fr;
   column-gap: 10px;
   place-items: center;
-  margin: 8px auto;
+  margin: 18px auto;
 }
 
 .pagination > button {
@@ -127,7 +130,17 @@ main > h1 > span {
 
 @media screen and (max-width: 48rem) {
   main {
-    width: 100%;
+    width: 85%;
+  }
+
+  main > h1 {
+    font-size: 1.37rem;
+  }
+}
+
+@media screen and (max-width: 38rem) {
+  main {
+    width: 95%;
   }
 
   main > h1 {
