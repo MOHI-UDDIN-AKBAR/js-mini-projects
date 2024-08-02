@@ -83,11 +83,11 @@ const menuItems = [
 
 const section = document.querySelector(".menu-items");
 const imagePath = "./Assets";
-function getMenuItemsByCategory(itemCategory) {
-  const className = itemCategory.className;
-  return className === "all"
+
+function getMenuItemsByCategory(selectedCategory) {
+  return selectedCategory === "all"
     ? menuItems
-    : menuItems.filter(({ category }) => category === className);
+    : menuItems.filter(({ category }) => category === selectedCategory);
 }
 
 function handleMenuCategories() {
@@ -95,16 +95,21 @@ function handleMenuCategories() {
 
   categories.forEach((category) => {
     category.addEventListener("click", () => {
-      const menuItemsByCategory = getMenuItemsByCategory(category);
-      console.log(category);
-      updateMenuItems(menuItemsByCategory);
+      const filteredMenuItems = getMenuItemsByCategory(category.className);
+
+      updateMenuItems(filteredMenuItems);
     });
   });
 }
 
+function formatDescription(description) {
+  return description.at(0).toUpperCase() + description.slice(1);
+}
+
 function generateMenuItemHTML({ title, category, price, img, desc }) {
-  console.log(img);
-  return `<div class="item ${category.toLowerCase()}">
+  const menuItem = document.createElement("div");
+  menuItem.classList.add("item", category.toLowerCase());
+  menuItem.innerHTML = `
           <img src="${imagePath}${img}" alt="${title}" />
           <div class="item-info">
             <div class="title-and-price">
@@ -112,17 +117,17 @@ function generateMenuItemHTML({ title, category, price, img, desc }) {
               <span class="price">$ ${price}</span>
             </div>
             <p class="item-description">
-             ${desc}
+             ${formatDescription(desc)}
             </p>
-          </div>
-        </div>`;
+          </div>`;
+  return menuItem;
 }
 
 function updateMenuItems(menuItems) {
   section.innerHTML = "";
-  section.innerHTML = menuItems.map((menuItem) =>
-    generateMenuItemHTML(menuItem)
-  );
+  menuItems.forEach((menItem) => {
+    section.appendChild(generateMenuItemHTML(menItem));
+  });
 }
 
 updateMenuItems(menuItems);
