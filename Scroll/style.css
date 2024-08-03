@@ -1,0 +1,330 @@
+@import url("https://fonts.googleapis.com/css2?family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap");
+
+:root {
+  --primary-color: rgb(223, 233, 237);
+  --secondray-color: #1f2633;
+}
+
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+  position: relative;
+}
+
+header {
+  width: 1200px;
+  z-index: 5;
+}
+
+.fixed-header {
+  animation: fixedHeader 0.6s linear 1 forwards;
+  top: 0;
+  position: fixed;
+}
+
+.static-header {
+  animation: staticHeader 0.6s linear 1 forwards;
+  top: 0;
+  position: fixed;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.3rem 0;
+}
+
+.brand-logo {
+  flex-basis: 30%;
+  margin-left: 20px;
+}
+
+.brand-logo > img {
+  width: 120px;
+  height: 30px;
+  object-fit: cover;
+}
+
+.navigation {
+  flex-basis: 60%;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  column-gap: 4rem;
+}
+
+.navigation > li {
+  display: flex;
+}
+
+.navigation > li > a {
+  width: 100%;
+  text-decoration: none;
+  padding: 0.4rem 0.6rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  text-transform: capitalize;
+  font-size: 1.2rem;
+}
+
+.menu-bar {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  position: absolute;
+}
+
+#Home {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+#Home > video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#Home > .info-container {
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  place-items: center;
+  background-color: rgba(0, 0, 0, 0.397);
+}
+
+.info-container > .tour-info {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tour-info > .title {
+  font-size: 3rem;
+  text-align: center;
+  color: var(--primary-color);
+  padding: 0.5rem;
+  font-family: "Philosopher", sans-serif;
+}
+
+.tour-info > .description {
+  padding: 0.3rem;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  text-align: center;
+  font-family: "Rubik", sans-serif;
+}
+
+.tour-info > .explore-btn {
+  padding: 0.5rem 1rem;
+  width: 200px;
+  border: 2px solid white;
+  background-color: transparent;
+  color: var(--primary-color);
+  margin-top: 10px;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+#About {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.2);
+  display: grid;
+  place-items: center;
+}
+#Services {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(65, 99, 178, 0.289);
+  display: grid;
+  place-items: center;
+}
+#Tours {
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(111, 65, 177, 0.164);
+  display: grid;
+  place-items: center;
+}
+
+.scroll-up {
+  text-align: right;
+  bottom: 10%;
+  right: 10%;
+  position: fixed;
+  z-index: 9;
+}
+
+.scroll-up > img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+  header {
+    width: 100%;
+    background-color: white;
+  }
+
+  nav {
+    background-color: white;
+  }
+
+  .brand-logo {
+    flex-basis: 0%;
+    margin-left: 10px;
+  }
+
+  .brand-logo > img {
+    width: 100px;
+    height: 25px;
+  }
+
+  .navigation {
+    flex-basis: 0%;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    left: 0px;
+    flex-direction: column;
+    column-gap: 0rem;
+    row-gap: 1rem;
+    overflow: hidden;
+    background-color: white;
+    padding: 0.5rem 0;
+    height: 220px;
+    display: none;
+  }
+
+  .show-navigation {
+    display: flex;
+    animation: increaseHeight 0.6s ease-in-out 1 forwards;
+  }
+
+  .hide-navigation {
+    animation: decreaseHeight 0.6s ease-in-out 1 forwards;
+  }
+
+  .navigation > li > a {
+    font-size: 1.2rem;
+    transition: font-size, transform 0.1s linear;
+    will-change: transform;
+    padding-left: 20px;
+    color: var(--secondray-color);
+  }
+
+  .navigation > li > a:hover {
+    font-size: 1.4rem;
+    transform: translateX(8px);
+    background-color: rgb(54, 64, 81, 0.15);
+  }
+
+  .menu-bar {
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+  }
+
+  .menu-bar > img {
+    width: 35px;
+    height: 35px;
+    object-fit: cover;
+  }
+
+  .info-container > .tour-info {
+    width: 90%;
+  }
+
+  .tour-info > .title {
+    font-size: 2rem;
+  }
+
+  .tour-info > .description {
+    font-size: 1rem;
+  }
+
+  .tour-info > .explore-btn {
+    width: 170px;
+    padding: 0.4rem 0.2rem;
+  }
+
+  .scroll-up > img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@keyframes increaseHeight {
+  from {
+    height: 0px;
+    padding: 0;
+  }
+  to {
+    height: 220px;
+    padding: 0.5rem 0;
+  }
+}
+
+@keyframes decreaseHeight {
+  from {
+    display: flex;
+    height: 220px;
+    padding: 0.5rem 0;
+  }
+  to {
+    height: 0px;
+    display: none;
+    padding: 0;
+  }
+}
+
+@keyframes fixedHeader {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: white;
+  }
+}
+
+@keyframes staticHeader {
+  from {
+    background-color: white;
+  }
+  to {
+    background-color: transparent;
+  }
+}
