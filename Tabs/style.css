@@ -1,6 +1,196 @@
-* {
+@import url("https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zain:wght@200;300;400;700;800;900&display=swap");
+
+:root {
+  --text-primary: rgb(31, 38, 51, 0.9);
+  --text-secondary: rgb(31, 38, 51, 0.7);
+  --primary-background-color: rgb(31, 38, 51, 0.1);
+}
+
+*,
+body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-main {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.content-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  max-width: 60%;
+}
+
+.content-section > h1 {
+  font-size: 2.5rem;
+  padding: 0.3rem 0.5rem;
+  font-family: "Gupter";
+}
+
+.content-section > p {
+  width: 70%;
+  padding: 0.3rem;
+  text-align: center;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400 !important;
+  text-align: center;
+  font-size: 1.08rem;
+  color: var(--text-primary);
+}
+
+.tabs-section {
+  max-width: 70%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  gap: 1rem;
+  height: 300px;
+  overflow: hidden;
+}
+
+.tabs-section > img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+}
+
+.tabs-section > .tab-content {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  border-radius: 5px 5px 0px 0px;
+  overflow: hidden;
+}
+
+.tab-content > .tab-control-buttons {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.tab-control-buttons > button {
+  padding: 0.4rem 0;
+  background-color: var(--primary-background-color);
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "Oswald", sans-serif;
+  letter-spacing: 0.08rem;
+  color: #1f2633;
+  cursor: pointer;
+  border: none;
+}
+
+.tab-control-buttons button:hover {
+  background-color: white;
+}
+
+.active {
+  background-color: white !important;
+}
+
+.tabs-info > div {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  padding: 0.3rem 0.4rem;
+  margin-top: 0.4rem;
+}
+
+.tabs-info div:nth-child(1) {
+  display: flex;
+}
+
+.tabs-info div > h3 {
+  font-family: "Zain", sans-serif;
+}
+
+.tabs-info div > p {
+  display: flex;
+  font-size: 1.2rem;
+  font-family: "Zain", sans-serif;
+  text-align: left;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 56.25rem) {
+  .page-main {
+    gap: 2rem;
+  }
+
+  .content-section {
+    max-width: 90%;
+    gap: 0rem;
+  }
+
+  .content-section > h1 {
+    font-size: 2.3rem;
+  }
+
+  .content-section > p {
+    font-size: 1.05rem;
+  }
+
+  .tabs-section {
+    max-width: 70%;
+    gap: 0.5rem;
+    grid-template-columns: none;
+    height: auto;
+  }
+
+  .tabs-info div {
+    padding: 1rem 0.4rem;
+    gap: 0.2rem;
+    margin-top: 0rem;
+  }
+
+  .tabs-info div > p {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 42.375rem) {
+  .page-main {
+    gap: 2rem;
+  }
+
+  .content-section {
+    max-width: 100%;
+  }
+
+  .content-section > h1 {
+    font-size: 2.2rem;
+  }
+
+  .content-section > p {
+    font-size: 1.05rem;
+    width: 85%;
+  }
+
+  .tabs-section {
+    max-width: 95%;
+  }
+
+  .tabs-info div > p {
+    font-size: 1.1rem;
+  }
 }
