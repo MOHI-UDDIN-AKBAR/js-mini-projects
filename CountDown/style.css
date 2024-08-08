@@ -85,6 +85,12 @@ body {
   justify-content: space-around;
 }
 
+.countDown-time > .expired {
+  margin: 20px auto;
+  color: var(--secondray-text-color);
+  font-size: 1.2rem;
+}
+
 .countDown-time > div {
   display: flex;
   flex-direction: column;

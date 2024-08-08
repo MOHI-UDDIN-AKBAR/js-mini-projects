@@ -3,6 +3,8 @@ const [daysElement, hoursElement, minutesElement, secondsElement] = [
   ...document.querySelectorAll(".countDown-time div h2"),
 ];
 
+const countDownElement = document.querySelector(".countDown-time");
+
 function setSalesDuration() {
   const salesDuration = new Date();
   salesDuration.setDate(salesDuration.getDate() + 3);
@@ -25,7 +27,13 @@ function calculateTimeRemaining(salesDuration) {
   );
   let minutesLeft = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
   let secondsLeft = Math.floor((timeLeft % (1000 * 60)) / 1000);
-  const remainingDuration = { dayLeft, hoursLeft, minutesLeft, secondsLeft };
+  const remainingDuration = {
+    dayLeft,
+    hoursLeft,
+    minutesLeft,
+    secondsLeft,
+    timeLeft,
+  };
 
   return remainingDuration;
 }
@@ -46,31 +54,16 @@ function updateCountDownDisplay({
   secondsElement.innerText = formatTime(secondsLeft);
 }
 
-function startCountDown({ dayLeft, hoursLeft, minutesLeft, secondsLeft }) {
+function startCountDown(salesDuration) {
   const intervalId = setInterval(() => {
-    secondsLeft--;
+    let { dayLeft, hoursLeft, minutesLeft, secondsLeft, timeLeft } =
+      calculateTimeRemaining(salesDuration);
 
-    if (secondsLeft < 0) {
-      secondsLeft = 59;
-      minutesLeft--;
-      if (minutesLeft < 0) {
-        minutesLeft = 59;
-        hoursLeft--;
-        if (hoursLeft < 0) {
-          hoursLeft = 23;
-          dayLeft--;
-        }
-      }
-    }
-
-    if (
-      secondsLeft === 0 &&
-      minutesLeft === 0 &&
-      hoursLeft === 0 &&
-      dayLeft == 0
-    ) {
+    if (timeLeft <= 0) {
       clearInterval(intervalId);
+      countDownElement.innerHTML = `<h3 class="expired">Sorry, The Give had Expired.</h3>`;
     }
+
     const timeDurationPerSeconds = {
       dayLeft,
       hoursLeft,
@@ -84,9 +77,7 @@ function startCountDown({ dayLeft, hoursLeft, minutesLeft, secondsLeft }) {
 
 function initializeCountDown() {
   const salesDuration = setSalesDuration();
-  let remainingDuration = calculateTimeRemaining(salesDuration);
-
-  startCountDown(remainingDuration);
+  startCountDown(salesDuration);
 }
 
 initializeCountDown();
