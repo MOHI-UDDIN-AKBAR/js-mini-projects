@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau+SC:wght@1..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --primary-text-color: rgb(75, 75, 143);
+  --secondary-text-color: #0f1218c6;
+  --primary-border-color: rgb(68, 68, 148);
+  --secondary-border-color: rgb(68, 68, 148, 0.5);
+  --primary-button-color: rgb(241, 243, 245);
+  --primary-button-bg-color: rgb(38, 92, 172);
+}
+
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 120rem;
+  margin: 0 auto;
+}
+
+.paragraph-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+
+.paragraph-container > .title {
+  text-transform: uppercase;
+  font-family: "Ysabeau SC", sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary-text-color);
+  padding: 0.3rem;
+  margin-top: 2rem;
+}
+
+.paragraph-quantity {
+  /* width: 40%; */
+  display: flex;
+  padding: 0.3rem;
+  justify-content: center;
+  gap: 2rem;
+  align-items: center;
+}
+
+.quantity-input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantity-input > label {
+  font-size: 1.8rem;
+  padding: 0.3rem;
+}
+
+.quantity-input > input {
+  width: 8rem;
+  font-size: 1.6rem;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+  border: 3px solid var(--secondary-border-color);
+  outline: none;
+  overflow: hidden;
+}
+
+.quantity-input > input::placeholder {
+  color: #1f2633b1;
+}
+
+.quantity-input > input:focus {
+  border: 3px solid var(--primary-border-color);
+}
+
+.generate {
+  background-color: var(--primary-button-bg-color);
+  color: var(--primary-button-color);
+  padding: 0.5rem 1.5rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.6rem;
+  font-weight: bold;
+}
+
+.paragraphs {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem;
+  gap: 4rem;
+}
+
+.paragraphs > .paragraph {
+  font-size: 1.6rem;
+  padding: 1rem;
+  color: var(--secondary-text-color);
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+}
+
+@media (max-width: 67.8rem) {
+  .paragraph-container {
+    gap: 1.7rem;
+  }
+
+  .paragraph-container > .title {
+    font-size: 2rem;
+  }
+
+  .quantity-input > label {
+    font-size: 1.6rem;
+  }
+
+  .quantity-input > input {
+    width: 7rem;
+    font-size: 1.6rem;
+  }
+
+  .paragraphs {
+    gap: 3rem;
+  }
+}
