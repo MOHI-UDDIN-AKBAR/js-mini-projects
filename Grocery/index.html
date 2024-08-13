@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Implement Todo List for Grocery to make daily life more easy."
+    />
+    <title>Grocery List</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="grocery-list-container">
+      <div class="header">
+        <small class="notification-message"></small>
+        <h1 class="app-title">Grocery Bud</h1>
+      </div>
+      <section class="grocery-item-adder">
+        <form class="add-grocery-form">
+          <div class="grocery-item-input">
+            <label for="grocery-item">
+              <input
+                type="text"
+                id="grocery-item"
+                title="grocery"
+                placeholder="Type your grocery list"
+              />
+            </label>
+          </div>
+          <button type="submit" class="form-button">Submit</button>
+        </form>
+      </section>
+      <small class="error-message">Please! Type Valid Input</small>
+      <section class="displayed-grocery-items"></section>
+      <button type="button" class="remove-all-items">Clear All Items</button>
+    </main>
+  </body>
+</html>
