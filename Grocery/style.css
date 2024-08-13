@@ -70,6 +70,10 @@ body {
   color: rgba(224, 231, 232, 1) !important;
 }
 
+.empty-string {
+  background-color: rgba(207, 160, 160, 0.9);
+}
+
 .app-title {
   padding: 0.4rem 1rem;
   font-size: 2.2rem;
@@ -117,15 +121,6 @@ body {
   font-size: 1.6rem;
   font-weight: bold;
   cursor: pointer;
-}
-
-.error-message {
-  color: var(--secondary-text-color);
-  margin-top: 1rem;
-  font-size: 1.2rem;
-  padding: 0rem 1rem;
-  font-family: "Barlow Semi Condensed", sans-serif;
-  visibility: hidden;
 }
 
 .displayed-grocery-items {

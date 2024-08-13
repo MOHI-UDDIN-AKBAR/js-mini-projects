@@ -4,7 +4,6 @@ const groceryInput = form.querySelector("input");
 const formSubmitButton = form.querySelector("button");
 const grocerySection = document.querySelector(".displayed-grocery-items");
 const clearGroceryButton = document.querySelector(".remove-all-items");
-const errorMessage = document.querySelector(".error-message");
 
 let groceries = getGroceryItemsFromLocalStorage();
 
@@ -17,7 +16,8 @@ function addClass(element, className) {
 }
 
 function removeCurrentStyle(notificationMessage, className) {
-  setTimeout(() => {
+  clearTimeout(notificationMessage.timeoutId);
+  notificationMessage.timeoutId = setTimeout(() => {
     notificationMessage.innerText = "";
     notificationMessage.style.visibility = "hidden";
     notificationMessage.classList.remove(className);
@@ -52,6 +52,11 @@ function displayNotification(groceryType, className) {
     }
     case "clear": {
       notificationMessage.innerText = "All Grocery items removed";
+      addClass(notificationMessage, className);
+      break;
+    }
+    case "empty": {
+      notificationMessage.innerText = "Please, type valid input";
       addClass(notificationMessage, className);
       break;
     }
@@ -191,8 +196,8 @@ function handleFormEvent(e) {
   e.preventDefault();
 
   const inputVal = groceryInput.value.trim();
-  if (inputVal === "") {
-    errorMessage.style.visibility = "visible";
+  if (inputVal === "" || inputVal.length > 30) {
+    displayNotification("empty", "empty-string");
     return;
   }
 
@@ -209,16 +214,10 @@ function handleFormEvent(e) {
 
 form.addEventListener("submit", (e) => handleFormEvent(e));
 
-function hideErrorMessage(element) {
-  element.style.visibility = "hidden";
-}
-
-groceryInput.addEventListener("focus", () => hideErrorMessage(errorMessage));
-
 function removeAllGroceries(grocerySection) {
   grocerySection.innerHTML = "";
   groceries.length = 0;
-  displayNotification("clear", "all-item-removed");
+  displayNotification("clear", "all-items-removed");
   clearLocalStorage();
 }
 
