@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
+
+:root {
+  --primary-color: #1f2633;
+  --secondary-text-color: rgba(240, 64, 64, 0.9);
+}
+
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  max-width: 1200px;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  row-gap: 2rem;
+}
+
+.grocery-list-container {
+  max-width: 50rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  display: grid;
+  place-items: center;
+  grid-template-rows: 1fr 1fr;
+}
+
+.notification-message {
+  width: 80%;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+  padding: 0.4rem 1rem;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 3px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  visibility: hidden;
+}
+
+.item-added {
+  background-color: rgb(183, 230, 183, 0.9);
+}
+
+.item-updated {
+  background-color: rgba(101, 199, 101, 0.9);
+}
+
+.item-deleted {
+  background-color: rgba(230, 183, 183, 0.9);
+}
+
+.all-items-removed {
+  background-color: rgba(246, 46, 46, 0.9);
+  color: rgba(224, 231, 232, 1) !important;
+}
+
+.app-title {
+  padding: 0.4rem 1rem;
+  font-size: 2.2rem;
+  font-family: "Titillium Web", sans-serif;
+  color: var(--primary-color);
+}
+
+.grocery-item-adder {
+  width: 80%;
+  display: grid;
+  place-items: center;
+  margin-top: 2rem;
+}
+
+.add-grocery-form {
+  display: grid;
+  grid-template-columns: 5fr 1fr;
+}
+
+.grocery-item-input > label > #grocery-item {
+  border: 2px solid rgb(170, 170, 215);
+  width: 100%;
+  padding: 0.7rem 1.1rem;
+  color: var(--primary-color);
+  border-radius: 3px 0px 0px 3px;
+  border-right: none;
+}
+
+.grocery-item-input > label > #grocery-item:focus {
+  outline: none;
+  border: 2px solid rgb(74, 74, 184);
+  border-right: none;
+}
+
+.grocery-item-input > label > #grocery-item::placeholder {
+  color: rgb(143, 153, 168);
+}
+
+.form-button {
+  border: none;
+  background-color: rgb(46, 139, 193);
+  color: white;
+  padding: 0.5rem 1.1rem;
+  border-radius: 0px 3px 3px 0px;
+  font-size: 1.6rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.error-message {
+  color: var(--secondary-text-color);
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  padding: 0rem 1rem;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  visibility: hidden;
+}
+
+.displayed-grocery-items {
+  width: 70%;
+  margin-top: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.individual-grocery-item {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.item-name {
+  color: var(--primary-color);
+}
+
+.action-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.edit-button,
+.delete-button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+}
+
+.edit-button > img,
+.delete-button > img {
+  width: 2.2rem;
+  height: 2.2rem;
+  object-fit: cover;
+}
+
+.remove-all-items {
+  width: 40%;
+  margin: 3rem auto;
+  border: none;
+  background-color: transparent;
+  font-size: 1.4rem;
+  border: 2px solid var(--secondary-text-color);
+  padding: 0.8rem 1.2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  color: var(--secondary-text-color);
+}
+
+.remove-all-items:hover {
+  background-color: var(--secondary-text-color);
+  color: white;
+  border: 2px solid transparent;
+}
+
+@media only screen and (max-width: 42.375rem) {
+  .grocery-list-container {
+    width: 100%;
+  }
+
+  .grocery-item-input > label > #grocery-item {
+    padding: 0.3rem 0.8rem;
+    border-radius: 2px 0px 0px 2px;
+  }
+
+  .form-button {
+    padding: 0.3rem 0.8rem;
+    border-radius: 0px 2px 2px 0px;
+    font-size: 1.2rem;
+  }
+
+  .remove-all-items {
+    padding: 0.4rem 1rem;
+  }
+}
