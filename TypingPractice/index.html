@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Boost your typing speed and accuracy with engaging, interactive games. Start improving today!"
+    />
+    <title>Typing Skills - Improve Your Typing Speed</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <header class="header-container">
+      <nav class="navigation">
+        <h1 class="brand-logo">TypingSkills</h1>
+      </nav>
+    </header>
+    <main class="test-container">
+      <section class="test-setup">
+        <h2>Check your typing skills in a minute</h2>
+        <form class="setup-form">
+          <h3>Select Your Challenge</h3>
+          <div class="select-time-duration">
+            <label for="duration-select">
+              <img
+                src="./Assets/Icons/clockIcon.svg"
+                alt="Select duration icon"
+              />
+            </label>
+            <select name="duration" id="duration-select">
+              <option value="1">1 Minute Test</option>
+              <option value="2">2 Minute Test</option>
+              <option value="3">3 Minute Test</option>
+              <option value="5">5 Minute Test</option>
+            </select>
+          </div>
+          <div class="select-text-difficulty">
+            <label for="text-difficulty">
+              <img
+                src="./Assets/Icons/textIcon.svg"
+                alt="Select difficulty icon"
+              />
+            </label>
+            <select name="text-difficulty" id="text-difficulty">
+              <option value="easy">Easy Text</option>
+              <option value="medium">Medium Text</option>
+              <option value="hard">Hard Text</option>
+            </select>
+          </div>
+          <button type="submit">Start test</button>
+        </form>
+      </section>
+      <section class="test-board-active">
+        <progress max="100" value="0"></progress>
+        <div class="info">
+          <span class="time-left">1:00</span>
+          <button type="button">
+            <span>Close</span>
+            <img src="./Assets/Icons/closeIcon.svg" alt="Close Icon" />
+          </button>
+        </div>
+        <p class="text-to-type">
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
+          tempora necessitatibus quae consectetur doloremque quasi, iure facilis
+          et fugiat aliquid reprehenderit laboriosam temporibus dolorum, soluta,
+          nemo voluptas cupiditate sapiente sit obcaecati at ab aspernatur
+          commodi! Voluptas, blanditiis dolorum alias repellat quo velit esse.
+          Asperiores magni id quas assumenda facilis. Incidunt.
+        </p>
+      </section>
+      <section class="results">
+        <h3>Typing Test Complete!</h3>
+        <div class="analysis">
+          <p>
+            Your speed was
+            <strong class="speed">44 <span>wpm</span></strong>
+            with
+            <strong class="accuracy">95%</strong>
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer>&copy;Copyright 2024! check typing skills</footer>
+  </body>
+</html>
