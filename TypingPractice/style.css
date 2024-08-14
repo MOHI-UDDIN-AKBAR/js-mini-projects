@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Concert+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap");
+
+html {
+  font-size: 62.5%;
+}
+
+*,
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  max-width: 1400px;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #dce7eb;
+  position: relative;
+}
+
+.app-header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.brand-logo {
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  font-size: 2.2rem;
+  font-family: "New Amsterdam", sans-serif;
+  color: #03045e;
+}
+
+.typing-test-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.setup-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+}
+
+.setup-section > h2 {
+  font-size: 2.1rem;
+  font-family: "Pacifico", cursive;
+  color: #023e8a;
+  padding: 0.5rem 1rem;
+  word-spacing: 0.7rem;
+}
+
+.challenge-setup-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 4rem;
+  gap: 2rem;
+}
+
+.challenge-setup-form > h3 {
+  font-size: 2rem;
+  font-family: "Concert One", sans-serif;
+  padding: 0.3rem 1rem;
+  color: #054f77;
+  margin-bottom: 1rem;
+}
+
+.selection {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.selection > img {
+  width: 35px;
+  height: 35px;
+  object-fit: cover;
+}
+
+.custom-duration-selector,
+.custom-difficulty-selector {
+  border: 2px solid #0096c7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+  padding: 0.2rem 0;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.current-duration,
+.current-difficulty {
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-family: "Moderustic", sans-serif;
+  color: #00455d;
+  padding: 0.3rem;
+  display: flex;
+  place-items: center;
+  gap: 0.5rem;
+  padding-left: 2rem;
+}
+
+.current-duration > span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #023e8a;
+  transform: translateY(-1px);
+}
+
+.custom-duration-selector > img,
+.custom-difficulty-selector > img {
+  width: 20px;
+  height: 20px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.current-difficulty {
+  margin-right: 3rem;
+}
+
+.start-test {
+  padding: 0.6rem 1rem;
+  font-size: 1.6rem;
+  width: 15rem;
+  background-color: #c3ebf4;
+  color: #023e8a;
+  font-weight: bold;
+  font-family: "Concert One", sans-serif;
+  border: none;
+  border-radius: 3px;
+  margin-bottom: 2rem;
+  border: 2px solid rgba(2, 62, 138, 0.2);
+  cursor: pointer;
+  margin-top: 1.5rem;
+}
+
+.start-test:hover {
+  border: 2px solid rgba(2, 62, 138, 0.7);
+}
+
+.dropdown {
+  width: 100%;
+  position: absolute;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+  top: 4rem;
+  padding: 1rem 0;
+  z-index: 1;
+  background-color: white;
+  border: 2px solid #0096c7;
+  border-radius: 5px;
+}
+
+.dropdown > li {
+  width: 95%;
+  font-size: 1.7rem;
+  font-weight: 500;
+  font-family: "Moderustic", sans-serif;
+  color: #00455d;
+  padding-left: 2rem;
+  padding: 0.55rem 2rem;
+  display: flex;
+  place-items: center;
+  gap: 0.5rem;
+  margin: 0px auto;
+}
+
+.dropdown > li:hover {
+  background-color: #caf0f8;
+  border-radius: 5px;
+}
+
+.duration-options > li > span {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #023e8a;
+  transform: translateY(-1px);
+}
+
+.duration-options {
+  display: none;
+}
+
+.difficulty-options {
+  display: none;
+}
+
+.test-board-active {
+  width: 60rem;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  box-shadow: 0 0 5px 0.2px #0095c77c;
+  border-radius: 5px;
+  padding-bottom: 3rem;
+}
+
+.info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  margin: 1rem auto;
+  position: relative;
+}
+
+.info > button {
+  background-color: transparent;
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  border: none;
+}
+
+.info > button > img {
+  width: 25px;
+  height: 25px;
+  object-fit: cover;
+}
+
+.time-left {
+  font-family: "Moderustic", sans-serif;
+  font-size: 2rem;
+  font-weight: bolder;
+  color: #023e8a;
+  padding: 0.2rem;
+}
+
+.text-to-type {
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Hind Siliguri", sans-serif;
+  color: #3a4e54d2;
+  padding: 0rem 0.5rem;
+  line-height: 4rem;
+  text-align: center;
+  letter-spacing: 0.3rem;
+}
+
+.text-to-type > span {
+  display: block;
+  border-bottom: 1.5px solid #03055e32;
+}
+
+.first-line::first-letter {
+  display: block;
+  color: rgb(186, 94, 94);
+  color: #3395db;
+  text-transform: capitalize;
+}
+
+.results {
+  width: 40rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  padding: 4rem;
+  box-shadow: 0 0 5px 0.2px #0095c77c;
+}
+
+.results > h3 {
+  font-size: 2.2rem;
+  font-family: "Moderustic", sans-serif;
+  color: #0096c7;
+  text-transform: capitalize;
+  padding: 0.4rem 0.5rem;
+}
+
+.analysis {
+  font-size: 1.6rem;
+  font-family: "Hind Siliguri", sans-serif;
+  color: #0882ab;
+  padding: 0.2rem 0.5rem;
+  font-weight: 500;
+}
+
+.analysis > strong {
+  font-size: 2.5rem;
+  color: #21a253;
+}
+
+.analysis > strong > span {
+  font-size: 2rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 1.4rem;
+  font-family: "Concert One", sans-serif;
+  color: #00455d;
+  text-transform: capitalize;
+}
+
+footer > span {
+  font-size: 2.5rem;
+  margin-right: 0.2rem;
+}
+
+@media (max-width: 42.375rem) {
+  .setup-section > h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .test-board-active {
+    width: 100%;
+    padding: 0 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .results {
+    width: 90%;
+  }
+}
+
+.setup-section,
+.test-board-active,
+.results {
+  display: none;
+}
