@@ -12,76 +12,89 @@
     <script src="script.js" defer></script>
   </head>
   <body>
-    <header class="header-container">
-      <nav class="navigation">
+    <header class="app-header">
+      <nav class="app-nav">
         <h1 class="brand-logo">TypingSkills</h1>
       </nav>
     </header>
-    <main class="test-container">
-      <section class="test-setup">
+    <main class="typing-test-container">
+      <section class="setup-section">
         <h2>Check your typing skills in a minute</h2>
-        <form class="setup-form">
+        <article class="challenge-setup-form">
           <h3>Select Your Challenge</h3>
-          <div class="select-time-duration">
-            <label for="duration-select">
+          <div class="selection">
+            <img
+              src="./Assets/Icons/clockIcon.svg"
+              alt="Select duration icon"
+            />
+            <div class="custom-duration-selector">
+              <h4 class="current-duration">
+                <span> 1 </span>
+                Minute Test
+              </h4>
               <img
-                src="./Assets/Icons/clockIcon.svg"
-                alt="Select duration icon"
+                src="./Assets/Icons/chevronDown.svg"
+                alt="chevron down Icon"
               />
-            </label>
-            <select name="duration" id="duration-select">
-              <option value="1">1 Minute Test</option>
-              <option value="2">2 Minute Test</option>
-              <option value="3">3 Minute Test</option>
-              <option value="5">5 Minute Test</option>
-            </select>
+              <ul class="duration-options dropdown">
+                <li><span> 1 </span> Minute Test</li>
+                <li><span> 2 </span> Minute Test</li>
+                <li><span> 3 </span> Minute Test</li>
+                <li><span> 5 </span> Minute Test</li>
+              </ul>
+            </div>
           </div>
-          <div class="select-text-difficulty">
-            <label for="text-difficulty">
+          <div class="selection">
+            <img
+              src="./Assets/Icons/textIcon.svg"
+              alt="Select difficulty icon"
+            />
+            <div class="custom-difficulty-selector">
+              <span class="current-difficulty">Easy Text</span>
               <img
-                src="./Assets/Icons/textIcon.svg"
-                alt="Select difficulty icon"
+                src="./Assets/Icons/chevronDown.svg"
+                alt="chevronDown Icon"
               />
-            </label>
-            <select name="text-difficulty" id="text-difficulty">
-              <option value="easy">Easy Text</option>
-              <option value="medium">Medium Text</option>
-              <option value="hard">Hard Text</option>
-            </select>
+              <ul class="difficulty-options dropdown">
+                <li>Easy Text</li>
+                <li>Medium Text</li>
+                <li>Hard Text</li>
+              </ul>
+            </div>
           </div>
-          <button type="submit">Start test</button>
-        </form>
+          <button type="button" class="start-test">Start test</button>
+        </article>
       </section>
       <section class="test-board-active">
-        <progress max="100" value="0"></progress>
         <div class="info">
           <span class="time-left">1:00</span>
-          <button type="button">
-            <span>Close</span>
+          <button type="button" class="close-test">
             <img src="./Assets/Icons/closeIcon.svg" alt="Close Icon" />
           </button>
         </div>
-        <p class="text-to-type">
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Praesentium
-          tempora necessitatibus quae consectetur doloremque quasi, iure facilis
-          et fugiat aliquid reprehenderit laboriosam temporibus dolorum, soluta,
-          nemo voluptas cupiditate sapiente sit obcaecati at ab aspernatur
-          commodi! Voluptas, blanditiis dolorum alias repellat quo velit esse.
-          Asperiores magni id quas assumenda facilis. Incidunt.
-        </p>
+        <!-- <p class="text-to-type"> -->
+        <!-- <span class="first-line">
+            orem ipsum dolor sit amet consectetur,</span
+          >
+          <span> adipisicing elit. Praesentium tempora </span>
+          <span> doloremque quasi, iure facilis et fugiat </span>
+          <span>reprehenderit laboriosam temporibus</span>
+          <span> nemo voluptas cupiditate sapiente sit.</span> -->
+        <!-- </p> -->
       </section>
       <section class="results">
         <h3>Typing Test Complete!</h3>
-        <div class="analysis">
-          <p>
-            Your speed was
-            <strong class="speed">44 <span>wpm</span></strong>
-            with
-            <strong class="accuracy">95%</strong>
-          </p>
-        </div>
+        <p class="analysis">
+          Your speed was
+          <strong class="speed">44 <span>wpm</span></strong>
+          with
+          <strong class="accuracy">95%</strong>
+        </p>
       </section>
     </main>
-    <footer>&copy;Copyright 2024! check typing skills</footer>
+    <footer>
+      <span>&copy;</span>
+      Copyright 2024! check typing skills
+    </footer>
   </body>
 </html>
