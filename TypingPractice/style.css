@@ -246,7 +246,7 @@ body {
   object-fit: cover;
 }
 
-.time-left {
+.selected-duration {
   font-family: "Moderustic", sans-serif;
   font-size: 2rem;
   font-weight: bolder;
@@ -256,6 +256,7 @@ body {
 
 .text-to-type {
   width: 100%;
+  height: 40rem;
   font-size: 1.8rem;
   font-weight: bold;
   font-family: "Hind Siliguri", sans-serif;
@@ -263,11 +264,15 @@ body {
   padding: 0rem 0.5rem;
   line-height: 6rem;
   text-align: center;
+  overflow: hidden;
 }
 
 .text-to-type > strong {
   display: block;
+  height: 6.5rem;
   border-bottom: 1.5px solid #03055e32;
+  transition: transform 0.3s ease-in;
+  will-change: transform;
 }
 
 .text-to-type > strong > span {
