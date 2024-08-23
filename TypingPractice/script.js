@@ -15,6 +15,7 @@ const testBoard = document.querySelector(".test-board-active");
 const selectedTimeDuration = document.querySelector(".selected-duration");
 const closeTestButton = document.querySelector(".close-test");
 const testResultSection = document.querySelector(".results");
+const footer = document.querySelector("footer");
 
 const PARAGRAPH_LINES = [];
 const windowSize = window.innerWidth;
@@ -356,3 +357,10 @@ function startTest() {
 startTestButton.addEventListener("click", () => {
   startTest();
 });
+
+function addFooterSection() {
+  const currentYear = new Date().getFullYear();
+  footer.innerHTML = `<span>&copy;</span>
+      Copyright ${currentYear}! check typing skills`;
+}
+addFooterSection();
