@@ -1,3 +1,13 @@
+:root {
+  --primary-color: #023e8a;
+  --secondary-color: #00455d;
+  --accent-color: #0096c7;
+  --background-color: #dce7eb;
+  --text-color: #3a4e54d2;
+  --highlight-color: #21a253;
+  --shadow-color: #0095c77c;
+}
+
 @import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap");
@@ -24,7 +34,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: #dce7eb;
+  background-color: var(--background-color);
   position: relative;
 }
 
@@ -60,7 +70,7 @@ body {
 .setup-section > h2 {
   font-size: 2.1rem;
   font-family: "Pacifico", cursive;
-  color: #023e8a;
+  color: var(--primary-color);
   padding: 0.5rem 1rem;
   word-spacing: 0.7rem;
 }
@@ -97,7 +107,7 @@ body {
 
 .custom-duration-selector,
 .custom-difficulty-selector {
-  border: 2px solid #0096c7;
+  border: 2px solid var(--accent-color);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -113,7 +123,7 @@ body {
   font-size: 1.7rem;
   font-weight: 500;
   font-family: "Moderustic", sans-serif;
-  color: #00455d;
+  color: var(--secondary-color);
   padding: 0.3rem;
   display: flex;
   place-items: center;
@@ -124,7 +134,7 @@ body {
 .current-duration > span {
   font-size: 2rem;
   font-weight: bold;
-  color: #023e8a;
+  color: var(--primary-color);
   transform: translateY(-1px);
 }
 
@@ -145,7 +155,7 @@ body {
   font-size: 1.6rem;
   width: 15rem;
   background-color: #c3ebf4;
-  color: #023e8a;
+  color: var(--primary-color);
   font-weight: bold;
   font-family: "Concert One", sans-serif;
   border: none;
@@ -172,7 +182,7 @@ body {
   padding: 1rem 0;
   z-index: 1;
   background-color: #ecf2f4;
-  border: 2px solid #0096c7;
+  border: 2px solid var(--accent-color);
   border-radius: 5px;
 }
 
@@ -181,7 +191,7 @@ body {
   font-size: 1.7rem;
   font-weight: 500;
   font-family: "Moderustic", sans-serif;
-  color: #00455d;
+  color: var(--secondary-color);
   padding-left: 2rem;
   padding: 0.55rem 2rem;
   display: flex;
@@ -198,7 +208,7 @@ body {
 .duration-options > li > span {
   font-size: 2rem;
   font-weight: bold;
-  color: #023e8a;
+  color: var(--primary-color);
   transform: translateY(-1px);
 }
 
@@ -216,7 +226,7 @@ body {
   display: none;
   flex-direction: column;
   align-items: center;
-  box-shadow: 0 0 5px 0.2px #0095c77c;
+  box-shadow: 0 0 5px 0.2px var(--shadow-color);
   border-radius: 5px;
   padding: 0 1rem;
   padding-bottom: 3rem;
@@ -250,7 +260,7 @@ body {
   font-family: "Moderustic", sans-serif;
   font-size: 2rem;
   font-weight: bolder;
-  color: #023e8a;
+  color: var(--primary-color);
   padding: 0.2rem;
 }
 
@@ -260,7 +270,7 @@ body {
   font-size: 1.8rem;
   font-weight: bold;
   font-family: "Hind Siliguri", sans-serif;
-  color: #3a4e54d2;
+  color: var(--text-color);
   padding: 0rem 0.5rem;
   line-height: 6rem;
   text-align: center;
@@ -288,7 +298,7 @@ body {
 
 .correct-typed-char {
   background-color: #21a25212;
-  color: #21a253;
+  color: var(--highlight-color);
 }
 
 .wrong-typed-char {
@@ -304,13 +314,13 @@ body {
   align-items: center;
   gap: 2rem;
   padding: 4rem;
-  box-shadow: 0 0 5px 0.2px #0095c77c;
+  box-shadow: 0 0 5px 0.2px var(--shadow-color);
 }
 
 .results > h3 {
   font-size: 2.2rem;
   font-family: "Moderustic", sans-serif;
-  color: #0096c7;
+  color: var(--accent-color);
   text-transform: capitalize;
   padding: 0.4rem 0.5rem;
 }
@@ -325,7 +335,7 @@ body {
 
 .analysis > strong {
   font-size: 2.5rem;
-  color: #21a253;
+  color: var(--highlight-color);
 }
 
 .analysis > strong > span {
@@ -339,7 +349,7 @@ footer {
   align-items: center;
   font-size: 1.4rem;
   font-family: "Concert One", sans-serif;
-  color: #00455d;
+  color: var(--secondary-color);
   text-transform: capitalize;
 }
 
