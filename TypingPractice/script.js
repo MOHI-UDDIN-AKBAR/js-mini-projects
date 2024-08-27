@@ -173,7 +173,7 @@ function onceUserStartTyping(paragraph, timeDuration) {
   let charIndex = 0;
   let hasCountdownStarted = false;
 
-  document.addEventListener("keydown", (e) => {
+  document.addEventListener("keyup", (e) => {
     startCountdown(hasCountdownStarted, timeDuration);
     hasCountdownStarted = true;
 
