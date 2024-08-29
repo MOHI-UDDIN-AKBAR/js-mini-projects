@@ -18,9 +18,9 @@ const testResultSection = document.querySelector(".results");
 const footer = document.querySelector("footer");
 
 const PARAGRAPH_LINES = [];
-const windowSize = window.innerWidth;
+const WINDOW_SIZE = window.innerWidth;
 const CHARACTERS_LENGTH_PER_LINE =
-  windowSize < 678 ? (windowSize < 450 ? 15 : 22) : 41;
+  WINDOW_SIZE < 678 ? (WINDOW_SIZE < 450 ? 15 : 22) : 41;
 const TRANSLATE_Y = 6.5;
 let isTimeDurationEnded = false;
 
