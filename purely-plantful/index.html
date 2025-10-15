@@ -89,10 +89,10 @@
     </section>
     <!-- Header -->
     <header class="header-wrapper">
-      <section class="menu-bar">
+      <section>
         <nav class="nav-bar">
           <!-- Menu Icon  -->
-          <ul>
+          <ul class="menu-bar nav-group">
             <li>
               <img
                 loading="lazy"
@@ -111,11 +111,11 @@
           </ul>
 
           <!-- Logo  -->
-          <div class="header-logo">Purely Plantful</div>
+          <div class="header-logo nav-group">Purely Plantful</div>
 
           <!-- Social Media  -->
           <div class="social-group">
-            <ul>
+            <ul class="nav-group">
               <li>
                 <img
                   loading="lazy"
@@ -656,798 +656,81 @@
         </div>
       </section>
     </main>
-    <!DOCTYPE html>
-    <html lang="en">
-      <head>
-        <!-- Meta Tags -->
-        <meta charset="UTF-8" />
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta
-          name="description"
-          content="Purely Plantful offers 100% organic herbal tinctures for calm, sleep, digestion, and energy. Vegan, non-GMO, no sugar — pure plant power for daily wellness."
-        />
-        <meta
-          name="keywords"
-          content="herbal tinctures, organic herbs, vegan wellness, natural supplements, stress relief, sleep aid, digestion support"
-        />
-        <meta name="author" content="Purely Plantful" />
-        <meta name="robots" content="index, follow" />
 
-        <!-- Open Graph Meta Tags for Social Sharing -->
-        <meta
-          property="og:title"
-          content="Purely Plantful | Organic Herbal Tinctures"
+    <!-- Footer -->
+    <footer class="footer-wrapper">
+      <div class="footer-block footer-block-newslatter">
+        <p class="footer-content">
+          Sign up for 15% off your first order & exclusive access to seasonal
+          deals.
+        </p>
+        <form class="form subscription-form" id="subscription-form">
+          <div class="form-group">
+            <label for="username">Name</label>
+            <input type="text" name="username" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="text" name="user-email" required />
+          </div>
+          <button type="submit" class="btn subscribe-btn">Subscribe</button>
+        </form>
+      </div>
+      <div class="footer-block social-group">
+        <img
+          loading="lazy"
+          src="./assets/icons/social-media-icons/fb.svg"
+          alt="facebook"
+          width="30"
+          height="30"
         />
-        <meta
-          property="og:description"
-          content="Discover 100% organic, vegan, and non-GMO herbal tinctures for wellness."
+        <img
+          loading="lazy"
+          src="./assets/icons/social-media-icons/instagram.svg"
+          alt="instagram"
+          width="30"
+          height="30"
         />
-        <meta
-          property="og:image"
-          content="https://yourdomain.com/assets/images/og-image.webp"
+        <img
+          loading="lazy"
+          src="./assets/icons/social-media-icons/pinterest.svg"
+          alt="pinterest"
+          width="30"
+          height="30"
         />
-        <meta property="og:url" content="https://yourdomain.com" />
-        <meta property="og:type" content="website" />
-
-        <!-- Title -->
-        <title>Purely Plantful | 100% Organic Herbal Tinctures</title>
-
-        <!-- Favicon (Consolidated) -->
-        <link
-          rel="icon"
-          type="image/png"
-          href="./assets/favicon/favicon-96x96.png"
-          sizes="96x96"
+        <img
+          loading="lazy"
+          src="./assets/icons/social-media-icons/tiktok.svg"
+          alt="tiktok"
+          width="30"
+          height="30"
         />
-        <link
-          rel="icon"
-          type="image/svg+xml"
-          href="./assets/favicon/favicon.svg"
-        />
-        <link rel="shortcut icon" href="./assets/favicon/favicon.ico" />
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="./assets/favicon/apple-touch-icon.png"
-        />
-        <link rel="manifest" href="/site.webmanifest" />
-
-        <!-- Fonts (Preload for Performance) -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          rel="preload"
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-          as="style"
-          onload="this.onload=null;this.rel='stylesheet'"
-        />
-        <noscript>
-          <link
-            href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap"
-            rel="stylesheet"
+      </div>
+      <div class="footer-block information">
+        <ul>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Affiliates</a></li>
+          <li><a href="#">Wholesale</a></li>
+          <li><a href="#">Shipping & Returns</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms & Conditions</a></li>
+        </ul>
+      </div>
+      <div class="footer-black footer-block-image">
+        <div class="image-container">
+          <img
+            loading="lazy"
+            src="./assets/images/footer/Group_2178.avif"
+            alt="image"
           />
-        </noscript>
-
-        <!-- Styles -->
-        <link rel="stylesheet" href="./style.css" />
-
-        <!-- Scripts (Async for Performance) -->
-        <script src="./app.js" defer></script>
-
-        <!-- Structured Data for SEO (Product Example) -->
-        <script type="application/ld+json">
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "name": "Purely Plantful",
-            "url": "https://yourdomain.com",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://yourdomain.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          }
-        </script>
-      </head>
-      <body>
-        <!-- Announcement Bar -->
-        <section
-          class="announcement-section"
-          aria-label="Promotional announcement"
-        >
-          <ul class="announcement-list">
-            <li class="announcement-item">
-              <div class="announcement-bar-outline"></div>
-              <p class="announcement-message">
-                You are 249,55 zł away from free shipping.
-              </p>
-            </li>
-          </ul>
-        </section>
-
-        <!-- Header -->
-        <header class="header-wrapper">
-          <nav class="nav-bar" aria-label="Main navigation">
-            <!-- Menu Toggle (Improved Accessibility) -->
-            <button
-              class="menu-toggle"
-              aria-label="Toggle menu"
-              aria-expanded="false"
-            >
-              <img
-                src="./assets/icons/menu.svg"
-                alt=""
-                width="30"
-                height="30"
-              />
-            </button>
-
-            <!-- Left Nav Links -->
-            <ul class="nav-group nav-left">
-              <li class="nav-link"><a href="#">Shop</a></li>
-              <li class="nav-link"><a href="#">Learn</a></li>
-              <li class="nav-link"><a href="#">15% Off</a></li>
-            </ul>
-
-            <!-- Logo -->
-            <a href="/" class="header-logo" aria-label="Purely Plantful Home">
-              Purely Plantful
-            </a>
-
-            <!-- Social Media -->
-            <ul class="social-group" aria-label="Social media links">
-              <li>
-                <a href="#" aria-label="Follow us on Instagram">
-                  <img
-                    src="./assets/icons/social-media-icons/instagram.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Follow us on Facebook">
-                  <img
-                    src="./assets/icons/social-media-icons/fb.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Follow us on Pinterest">
-                  <img
-                    src="./assets/icons/social-media-icons/pinterest.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#" aria-label="Follow us on TikTok">
-                  <img
-                    src="./assets/icons/social-media-icons/tiktok.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
-                </a>
-              </li>
-            </ul>
-
-            <!-- Right Nav Links -->
-            <ul class="nav-group nav-right" aria-label="User actions">
-              <li class="nav-link">
-                <a href="#" aria-label="User account">
-                  <img
-                    src="./assets/icons/user_circle.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
-                </a>
-              </li>
-              <li class="nav-link">
-                <a href="#" class="header-search-popup" aria-label="Search">
-                  <img
-                    src="./assets/icons/search.svg"
-                    alt=""
-                    width="30"
-                    height="30"
-                  />
-                </a>
-              </li>
-              <li class="nav-link nav-link-cart-circle">
-                <a href="#" aria-label="Shopping cart with 100 items">
-                  <span class="cart-item-quantity">100</span>
-                </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-
-        <!-- Main Content -->
-        <main class="main-container">
-          <!-- Hero Section -->
-          <section class="hero" aria-label="Hero section">
-            <h1>
-              Transform
-              <figure class="image-wrapper">
-                <img
-                  src="./assets/images/inline-image/herbs.webp"
-                  alt="Herbal ingredients"
-                  width="80"
-                  height="80"
-                  loading="lazy"
-                />
-              </figure>
-              your health with
-              <figure class="image-wrapper">
-                <img
-                  src="./assets/images/inline-image/herbal-tincture.webp"
-                  alt="Herbal tincture bottle"
-                  width="80"
-                  height="80"
-                  loading="lazy"
-                />
-              </figure>
-              herbal tinctures
-              <figure class="image-wrapper">
-                <a href="#" aria-label="Explore herbal tinctures">
-                  <img
-                    src="./assets/images/inline-image/webgif.webp"
-                    alt="Herbal tincture animation"
-                    width="80"
-                    height="80"
-                    loading="lazy"
-                  />
-                </a>
-              </figure>
-            </h1>
-          </section>
-
-          <!-- Featured Products -->
-          <section
-            class="products products--featured"
-            aria-label="Featured products"
-          >
-            <a href="#" class="btn primary-btn">Shop All</a>
-            <div class="products-grid">
-              <article class="products-item">
-                <video
-                  class="product-video"
-                  controls
-                  muted
-                  loop
-                  width="200"
-                  poster="./assets/images/products/calm/product-poster/Calm-PDP-1_01a632a7-dbff-4723-82f5-5a95ee105530.webp"
-                  loading="lazy"
-                >
-                  <source
-                    src="./assets/videos/products/calm/product-video/dfac94aadb234ed29c7e53c3ec109565.HD-1080p-7.2Mbps-22633795.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption>
-                  <h3 class="product-name">Calm</h3>
-                  <p class="product-price">140,00 zł</p>
-                </figcaption>
-              </article>
-              <article class="products-item">
-                <video
-                  class="product-video"
-                  controls
-                  muted
-                  loop
-                  width="200"
-                  poster="./assets/images/products/digest/product-poster/Digest-PDP-1.webp"
-                  loading="lazy"
-                >
-                  <source
-                    src="./assets/videos/products/digest/product-video/cefad14e7a004bfdb3c0129326188d9c.HD-1080p-7.2Mbps-22633695.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption>
-                  <h3 class="product-name">Digest</h3>
-                  <p class="product-price">135,00 zł</p>
-                </figcaption>
-              </article>
-              <article class="products-item">
-                <video
-                  class="product-video"
-                  controls
-                  muted
-                  loop
-                  width="200"
-                  poster="./assets/images/products/sleep/product-poster/Sleep-PDP-1_9d915f35-5b95-4557-8cfd-ffe931ceb4a7.webp"
-                  loading="lazy"
-                >
-                  <source
-                    src="./assets/videos/products/sleep/product-video/502d637292704323a7e73b89b504d2eb.HD-1080p-7.2Mbps-22628408.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption>
-                  <h3 class="product-name">Sleep</h3>
-                  <p class="product-price">135,00 zł</p>
-                </figcaption>
-              </article>
-              <article class="products-item">
-                <video
-                  class="product-video"
-                  controls
-                  muted
-                  loop
-                  width="200"
-                  poster="./assets/images/products/shroom-boost/product-poster/Shroom-PDP-1_f5da91e5-496c-4c3e-8b1b-314aeb26ac51.webp"
-                  loading="lazy"
-                >
-                  <source
-                    src="./assets/videos/products/shroom-boost/product-video/02ad946e6a8d4bacbf87274359efcb73.HD-1080p-7.2Mbps-22645708.mp4"
-                    type="video/mp4"
-                  />
-                  Your browser does not support the video tag.
-                </video>
-                <figcaption>
-                  <h3 class="product-name">Shroom Boost</h3>
-                  <p class="product-price">140,00 zł</p>
-                </figcaption>
-              </article>
-            </div>
-          </section>
-
-          <!-- Herbal Tinctures Info -->
-          <section class="template" aria-label="About herbal tinctures">
-            <h2>What are herbal tinctures?</h2>
-            <!-- Upgraded to h2 for hierarchy -->
-            <p>
-              Herbal tinctures are highly bioavailable concentrated essences of
-              medicinal herbs.
-            </p>
-            <a href="#" class="btn">Discover Our Range</a>
-          </section>
-
-          <!-- Product Attributes -->
-          <section
-            class="product-attributes product-attributes-wrapper"
-            aria-label="Product attributes"
-          >
-            <div class="product-attribute">
-              <img
-                src="./assets/images/product-attributes/No-artificial-colours.webp"
-                alt="No artificial colors icon"
-                loading="lazy"
-              />
-              <span>No artificial colors</span>
-            </div>
-            <div class="product-attribute">
-              <img
-                src="./assets/images/product-attributes/No-sugar---3.webp"
-                alt="No added sugar icon"
-                loading="lazy"
-              />
-              <span>No added sugar</span>
-            </div>
-            <div class="product-attribute">
-              <img
-                src="./assets/images/product-attributes/No-synthetic-flavours---5.webp"
-                alt="No synthetic flavors icon"
-                loading="lazy"
-              />
-              <span>No synthetic flavors</span>
-            </div>
-            <div class="product-attribute">
-              <img
-                src="./assets/images/product-attributes/Non-GMO---1.webp"
-                alt="Non-GMO icon"
-                loading="lazy"
-              />
-              <span>Non-GMO</span>
-            </div>
-            <div class="product-attribute">
-              <img
-                src="./assets/images/product-attributes/Organic---4.webp"
-                alt="Organic icon"
-                loading="lazy"
-              />
-              <span>100% Organic</span>
-            </div>
-            <div class="product-attribute">
-              <img
-                src="./assets/images/product-attributes/Vegan---4.webp"
-                alt="Vegan icon"
-                loading="lazy"
-              />
-              <span>Vegan</span>
-            </div>
-          </section>
-
-          <!-- Showcase Video -->
-          <section
-            class="showcase showcase--video"
-            aria-label="Organic herbs showcase"
-          >
-            <div class="background-video">
-              <video
-                controls
-                loop
-                muted
-                width="500"
-                poster="./assets/images/template/poster/c63a904f9cc84948bbfa572fa685fb38.thumbnail.0000000000_1085x.webp"
-                loading="lazy"
-              >
-                <source
-                  src="./assets/videos/template/c63a904f9cc84948bbfa572fa685fb38.HD-720p-4.5Mbps-23086823.mp4"
-                  type="video/mp4"
-                />
-              </video>
-            </div>
-            <div class="showcase__content">
-              <h2>We only use 100% Organic Certified Herbs</h2>
-              <a href="#" class="btn">View Products</a>
-            </div>
-          </section>
-
-          <!-- Herbal Support -->
-          <section class="herbal-support" aria-label="Herbal support tips">
-            <h2>Herbal support, whenever you need it</h2>
-            <div class="support-card">
-              <figure>
-                <img
-                  src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_4.webp"
-                  alt="Herbal tincture for stress relief"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <p>Start your day, fight stress, and wind down with herbs</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="support-card">
-              <figure>
-                <img
-                  src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_5.webp"
-                  alt="Herbal tincture in tea or coffee"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <p>
-                    Add tinctures to your daily tea or coffee for a herbal boost
-                  </p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="support-card">
-              <figure>
-                <img
-                  src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_6.webp"
-                  alt="Portable herbal tincture bottle"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <p>Keep our tinctures in your bag for on-the-go support</p>
-                </figcaption>
-              </figure>
-            </div>
-            <div class="support-card">
-              <figure>
-                <img
-                  src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_7.webp"
-                  alt="Travel-friendly herbal tincture bottle"
-                  loading="lazy"
-                />
-                <figcaption>
-                  <p>
-                    Travel-friendly bottles for herbal support wherever you need
-                    it
-                  </p>
-                </figcaption>
-              </figure>
-            </div>
-          </section>
-
-          <!-- Newsletter Signup -->
-          <section class="newsletter" aria-label="Newsletter signup">
-            <div class="sign-up-image">
-              <img
-                src="./assets/images/sign-up-bg-img/Sleep-Rescue-Bundle---PDP---9_94d4997d-d328-4c4c-945a-f89faa36efa8.webp"
-                alt="Newsletter signup background"
-                loading="lazy"
-              />
-            </div>
-            <form
-              class="form"
-              id="newsletter-form"
-              aria-label="Newsletter subscription form"
-            >
-              <h2>Sign up to our newsletter to get 15% off</h2>
-              <div class="form-group">
-                <label for="username">Name</label>
-                <input
-                  type="text"
-                  id="username"
-                  name="username"
-                  required
-                  aria-required="true"
-                />
-              </div>
-              <div class="form-group">
-                <label for="user-email">Email</label>
-                <input
-                  type="email"
-                  id="user-email"
-                  name="user-email"
-                  required
-                  aria-required="true"
-                />
-              </div>
-              <button type="submit" class="btn">Submit</button>
-            </form>
-          </section>
-
-          <!-- Discounted Bundles -->
-          <section
-            class="bundles products-on-discount"
-            aria-label="Discounted product bundles"
-          >
-            <h2>Save <span>10%</span> with bundles</h2>
-            <div class="products-list">
-              <article class="product-item">
-                <img
-                  src="./assets/images/discount-items/AnxietyRescueBundle-PDP-3_cddfd8c4-331e-4626-8530-31e26ac89b03.webp"
-                  alt="Anxiety Rescue Bundle"
-                  loading="lazy"
-                />
-                <p class="product-name">Anxiety Rescue Bundle</p>
-                <span class="price">550,00 zł</span>
-              </article>
-              <article class="product-item">
-                <img
-                  src="./assets/images/discount-items/GutRescueBundle-PlantstotheRescue-4.webp"
-                  alt="Gut Rescue Bundle"
-                  loading="lazy"
-                />
-                <p class="product-name">Gut Rescue Bundle</p>
-                <span class="price">520,00 zł</span>
-              </article>
-              <article class="product-item">
-                <img
-                  src="./assets/images/discount-items/SleepRescueBundle-PDP-5_9f3bb5bf-f919-42c4-8df9-bd81c5e244c2.webp"
-                  alt="Sleep Rescue Bundle"
-                  loading="lazy"
-                />
-                <p class="product-name">Sleep Rescue Bundle</p>
-                <span class="price">550,00 zł</span>
-              </article>
-              <article class="product-item">
-                <img
-                  src="./assets/images/discount-items/TheFullKit-PDP-2_0f6370fa-cc1d-4b87-996d-748ff686d395.webp"
-                  alt="The Full Kit"
-                  loading="lazy"
-                />
-                <p class="product-name">The Full Kit</p>
-                <!-- Fixed inconsistent name -->
-                <span class="price">550,00 zł</span>
-              </article>
-            </div>
-          </section>
-
-          <!-- Promo Banner -->
-          <section class="promo-banner" aria-label="Promotional banner">
-            <img
-              src="./assets/images/banner/Gift_Card_-_PDP_-_45.webp"
-              alt="Free shipping promotion"
-              loading="lazy"
-            />
-            <div class="banner-content">
-              <h2>Free Shipping on Orders Over 50 zł</h2>
-              <!-- Fixed currency inconsistency -->
-              <a href="#" class="btn">Shop Now</a>
-            </div>
-          </section>
-
-          <!-- FAQs -->
-          <section class="faqs" aria-label="Frequently asked questions">
-            <h2>FAQs</h2>
-            <details class="faq" open>
-              <summary class="faq-summary">
-                <img
-                  class="faq-image"
-                  src="./assets/images/FAQs/Alcoholic_-_1.avif"
-                  alt="Alcohol-free tincture icon"
-                  loading="lazy"
-                />
-                <p class="faq-content">Are your tinctures alcohol-free?</p>
-              </summary>
-              <p>
-                Yes! Our tinctures are alcohol-free, designed for maximum
-                bioavailability without the strong taste of alcohol. We use
-                organic non-palm glycerine to ensure inclusivity for those with
-                health, addiction, or religious concerns.
-              </p>
-            </details>
-            <details class="faq">
-              <summary class="faq-summary">
-                <img
-                  class="faq-image"
-                  src="./assets/images/FAQs/Combination---4.webp"
-                  alt="Tincture combination icon"
-                  loading="lazy"
-                />
-                <p class="faq-content">Can I combine tinctures?</p>
-              </summary>
-              <p>
-                Yes, our tinctures are crafted to complement each other
-                seamlessly. Mix and match as needed!
-              </p>
-            </details>
-            <details class="faq">
-              <summary class="faq-summary">
-                <img
-                  class="faq-image"
-                  src="./assets/images/FAQs/Discount_-_1.avif"
-                  alt="Discount icon"
-                  loading="lazy"
-                />
-                <p class="faq-content">Do you ever offer discounts?</p>
-              </summary>
-              <p>
-                Yes! Join our newsletter for exclusive discounts and seasonal
-                offers.
-              </p>
-            </details>
-            <details class="faq">
-              <summary class="faq-summary">
-                <img
-                  class="faq-image"
-                  src="./assets/images/FAQs/No-synthetic-flavours---5.webp"
-                  alt="Tincture usage icon"
-                  loading="lazy"
-                />
-                <p class="faq-content">How should I take tinctures?</p>
-              </summary>
-              <p>
-                Place the recommended dose under your tongue for 30–60 seconds
-                for optimal absorption, or mix with water, juice, or tea.
-                Consistency is key.
-              </p>
-            </details>
-            <details class="faq">
-              <summary class="faq-summary">
-                <img
-                  class="faq-image"
-                  src="./assets/images/FAQs/Taste_-_1.webp"
-                  alt="Tincture taste icon"
-                  loading="lazy"
-                />
-                <p class="faq-content">How do the tinctures taste?</p>
-              </summary>
-              <p>
-                Our alcohol-free tinctures have a naturally sweet, herbal taste
-                with a syrupy consistency, thanks to organic non-palm glycerine
-                with a low glycemic index.
-              </p>
-            </details>
-          </section>
-
-          <!-- Social Showcase -->
-          <section class="social-showcase" aria-label="Social media showcase">
-            <h2>@purelyplantful.co</h2>
-            <div class="showcase-item">
-              <img
-                src="./assets/images/posts/Instagram_post_-_133.webp"
-                alt="Instagram post showcasing herbal tinctures"
-                loading="lazy"
-              />
-            </div>
-            <div class="showcase-item">
-              <img
-                src="./assets/images/posts/Instagram_post_-_60.webp"
-                alt="Instagram post featuring wellness products"
-                loading="lazy"
-              />
-            </div>
-            <div class="showcase-item">
-              <img
-                src="./assets/images/posts/Instagram_post_-_89.webp"
-                alt="Instagram post promoting organic herbs"
-                loading="lazy"
-              />
-            </div>
-            <div class="showcase-item">
-              <img
-                src="./assets/images/posts/Instagram_post_-_132.webp"
-                alt="Instagram post highlighting customer reviews"
-                loading="lazy"
-              />
-            </div>
-          </section>
-        </main>
-
-        <!-- Footer -->
-        <footer class="footer-wrapper">
-          <div class="footer-block footer-block-newslatter">
-            <p class="footer-content">
-              Sign up for 15% off your first order & exclusive access to
-              seasonal deals.
-            </p>
-            <form class="form subscription-form" id="subscription-form">
-              <div class="form-group">
-                <label for="username">Name</label>
-                <input type="text" name="username" required />
-              </div>
-              <div class="form-group">
-                <label for="email">Email</label>
-                <input type="text" name="user-email" required />
-              </div>
-              <button type="submit" class="btn subscribe-btn">Subscribe</button>
-            </form>
-          </div>
-          <div class="footer-block social-group">
-            <img
-              loading="lazy"
-              src="./assets/icons/social-media-icons/fb.svg"
-              alt="facebook"
-              width="30"
-              height="30"
-            />
-            <img
-              loading="lazy"
-              src="./assets/icons/social-media-icons/instagram.svg"
-              alt="instagram"
-              width="30"
-              height="30"
-            />
-            <img
-              loading="lazy"
-              src="./assets/icons/social-media-icons/pinterest.svg"
-              alt="pinterest"
-              width="30"
-              height="30"
-            />
-            <img
-              loading="lazy"
-              src="./assets/icons/social-media-icons/tiktok.svg"
-              alt="tiktok"
-              width="30"
-              height="30"
-            />
-          </div>
-          <div class="footer-block information">
-            <ul>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact</a></li>
-              <li><a href="#">Affiliates</a></li>
-              <li><a href="#">Wholesale</a></li>
-              <li><a href="#">Shipping & Returns</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">Terms & Conditions</a></li>
-            </ul>
-          </div>
-          <div class="footer-black footer-block-image">
-            <div class="image-container">
-              <img
-                loading="lazy"
-                src="./assets/images/footer/Group_2178.avif"
-                alt="image"
-              />
-            </div>
-            <p>
-              *These statements have not been evaluated by the Food and Drug
-              Administration. This product is not intended to diagnose, treat,
-              cure or prevent any disease.
-            </p>
-          </div>
-        </footer>
-      </body>
-    </html>
+        </div>
+        <p>
+          *These statements have not been evaluated by the Food and Drug
+          Administration. This product is not intended to diagnose, treat, cure
+          or prevent any disease.
+        </p>
+      </div>
+    </footer>
   </body>
 </html>
