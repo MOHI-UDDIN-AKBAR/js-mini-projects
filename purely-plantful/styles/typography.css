@@ -1,0 +1,17 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  /* color: var(--primary-text); */
+}
+
+h1 {
+  font-size: calc(var(--font-base-size) * 0.5rem);
+}
+
+p {
+  /* font-size: var(--font-base-size); */
+}
