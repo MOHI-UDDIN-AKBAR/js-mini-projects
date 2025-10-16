@@ -93,36 +93,41 @@
         <nav class="nav-bar">
           <!-- Menu Icon  -->
           <ul class="menu-bar nav-group">
-            <li>
+            <li class="nav-link">
               <img
                 loading="lazy"
                 src="./assets/icons/menu.svg"
                 alt="menu"
-                width="30"
-                height="30"
+                width="24"
+                height="24"
+                class="menu-bar-icon"
               />
             </li>
           </ul>
           <!-- Left Nav Links -->
-          <ul class="nav-group nav-left">
-            <li class="nav-link"><a href="#">SHOP</a></li>
-            <li class="nav-link"><a href="#">LEARN</a></li>
-            <li class="nav-link"><a href="#">15% OFF</a></li>
-          </ul>
-
-          <!-- Logo  -->
-          <div class="header-logo nav-group">Purely Plantful</div>
-
-          <!-- Social Media  -->
-          <div class="social-group">
-            <ul class="nav-group">
+          <div class="main-nav">
+            <ul class="nav-group nav-left">
+              <li class="nav-link cancel-bar">
+                <img
+                  loading="lazy"
+                  src="./assets/icons/cancel.svg"
+                  alt="instagram"
+                  width="40"
+                  height="40"
+                />
+              </li>
+              <li class="nav-link"><a href="#">SHOP</a></li>
+              <li class="nav-link"><a href="#">LEARN</a></li>
+              <li class="nav-link"><a href="#">15% OFF</a></li>
+            </ul>
+            <ul class="nav-group social-group-on-mobile">
               <li>
                 <img
                   loading="lazy"
                   src="./assets/icons/social-media-icons/instagram.svg"
                   alt="instagram"
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                 />
               </li>
               <li>
@@ -130,8 +135,8 @@
                   loading="lazy"
                   src="./assets/icons/social-media-icons/fb.svg"
                   alt="facebook"
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                 />
               </li>
               <li>
@@ -139,8 +144,8 @@
                   loading="lazy"
                   src="./assets/icons/social-media-icons/pinterest.svg"
                   alt="pinterest"
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                 />
               </li>
               <li>
@@ -148,12 +153,56 @@
                   loading="lazy"
                   src="./assets/icons/social-media-icons/tiktok.svg"
                   alt="tiktok"
-                  width="30"
-                  height="30"
+                  width="40"
+                  height="40"
                 />
               </li>
             </ul>
           </div>
+
+          <!-- Logo  -->
+          <div class="header-logo nav-group">Purely Plantful</div>
+
+          <!-- Social Media  -->
+          <ul class="nav-group social-group">
+            <li>
+              <img
+                loading="lazy"
+                src="./assets/icons/social-media-icons/instagram.svg"
+                alt="instagram"
+                width="24"
+                height="24"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="./assets/icons/social-media-icons/fb.svg"
+                alt="facebook"
+                width="24"
+                height="24"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="./assets/icons/social-media-icons/pinterest.svg"
+                alt="pinterest"
+                width="24"
+                height="24"
+              />
+            </li>
+            <li>
+              <img
+                loading="lazy"
+                src="./assets/icons/social-media-icons/tiktok.svg"
+                alt="tiktok"
+                width="24"
+                height="24"
+              />
+            </li>
+          </ul>
+
           <!-- Right Nav Links  -->
           <ul class="nav-group nav-right">
             <li class="nav-link">
@@ -161,8 +210,8 @@
                 loading="lazy"
                 src="./assets/icons/user_circle.svg"
                 alt="user_circle"
-                width="30"
-                height="30"
+                width="24"
+                height="24"
               />
             </li>
           </ul>
@@ -172,14 +221,14 @@
                 loading="lazy"
                 src="./assets/icons/search.svg"
                 alt="search"
-                width="30"
-                height="30"
+                width="24"
+                height="24"
               />
             </li>
           </ul>
-          <ul>
+          <ul class="nav-group">
             <li class="nav-link nav-link-cart-circle">
-              <div class="cart-item-quantity">100</div>
+              <div class="cart-item-quantity">0</div>
             </li>
           </ul>
         </nav>
@@ -189,53 +238,56 @@
     <main class="main-container">
       <!-- Hero Section -->
       <section class="hero">
-        <h1>
-          Transform
+        <h1 class="hero-content">
+          <span> Transform </span>
           <figure class="image-wrapper">
             <img
               loading="lazy"
               src="./assets/images/inline-image/herbs.webp"
               alt="herbs"
-              width="80"
-              height="80"
+              width="130"
+              height="91"
             />
           </figure>
-          your health with
+          <span> your health </span>
+          <span> with </span>
           <figure class="image-wrapper">
             <img
               loading="lazy"
               src="./assets/images/inline-image/fwefwe---12.webp"
               alt="fwefwe"
-              width="80"
-              height="80"
+              width="130"
+              height="130"
+              class="fwefwe"
             />
           </figure>
-          herbal tinctures
+          <span> herbal tinctures </span>
           <figure class="image-wrapper">
             <a href="#">
               <img
                 loading="lazy"
                 src="./assets/images/inline-image/webgif.webp"
                 alt="webgif"
-                width="80"
-                height="80"
+                width="130"
+                height="91"
               />
             </a>
           </figure>
         </h1>
       </section>
       <!-- Featured Products -->
-      <section class="products products--featured">
+      <section class="products-featured">
         <button class="btn primary-btn">SHOP ALL</button>
         <div class="products-grid">
           <figure class="products-item">
             <!-- autoplay -->
+
             <video
               class="product-video"
-              controls
               muted
               loop
-              width="200"
+              width="309"
+              height="309"
               poster="./assets/images/products/calm/product-poster/Calm-PDP-1_01a632a7-dbff-4723-82f5-5a95ee105530.webp"
             >
               <source
@@ -246,17 +298,17 @@
             </video>
             <figcaption>
               <h3 class="product-name">Calm</h3>
-              <p class="product-price">140,00zl</p>
+              <p class="product-price">140,00 zl</p>
             </figcaption>
           </figure>
-          <figure class="card-item product">
+          <figure class="products-item">
             <!-- autoplay -->
             <video
               class="product-video"
-              controls
               muted
               loop
-              width="200"
+              width="309"
+              height="309"
               poster="./assets/images/products/digest/product-poster/Digest-PDP-1.webp"
             >
               <source
@@ -267,17 +319,17 @@
             </video>
             <figcaption>
               <h3 class="product-name">Digest</h3>
-              <p class="product-price">135,00zl</p>
+              <p class="product-price">135,00 zl</p>
             </figcaption>
           </figure>
-          <figure class="card-item product">
+          <figure class="products-item">
             <!-- autoplay -->
             <video
               class="product-video"
-              controls
               muted
               loop
-              width="200"
+              width="309"
+              height="309"
               poster="./assets/images/products/sleep/product-poster/Sleep-PDP-1_9d915f35-5b95-4557-8cfd-ffe931ceb4a7.webp"
             >
               <source
@@ -288,17 +340,17 @@
             </video>
             <figcaption>
               <h3 class="product-name">Sleep</h3>
-              <p class="product-price">135,00zl</p>
+              <p class="product-price">135,00 zl</p>
             </figcaption>
           </figure>
-          <figure class="card-item product">
+          <figure class="products-item">
             <!-- autoplay -->
             <video
               class="product-video"
-              controls
               muted
               loop
-              width="200"
+              width="309"
+              height="309"
               poster="./assets/images/products/shroom-boost/product-poster/Shroom-PDP-1_f5da91e5-496c-4c3e-8b1b-314aeb26ac51.webp"
             >
               <source
@@ -308,8 +360,8 @@
               Your browser does not support the video tag.
             </video>
             <figcaption>
-              <h3 class="product-name">Calm</h3>
-              <p class="product-price">140,00zl</p>
+              <h3 class="product-name">shroom boost</h3>
+              <p class="product-price">140,00 zl</p>
             </figcaption>
           </figure>
         </div>
@@ -331,7 +383,7 @@
           <img
             loading="lazy"
             src="./assets/images/product-attributes/No-artificial-colours.webp"
-            alt="No-artificial-colours"
+            alt="No-artificial-colors"
           />
           <span>No artificial colors</span>
         </div>
@@ -381,10 +433,9 @@
         <!-- autoplay -->
         <div class="background-video">
           <video
-            controls
+            autoplay
             loop
             muted
-            width="500"
             poster="./assets/images/template/poster/c63a904f9cc84948bbfa572fa685fb38.thumbnail.0000000000_1085x.webp"
           >
             <source
@@ -402,7 +453,7 @@
       <section class="herbal-support">
         <h2>Herbal support, whenever you need it</h2>
         <div class="support-card">
-          <figure>
+          <figure class="support-card-figure">
             <img
               loading="lazy"
               src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_4.webp"
@@ -412,9 +463,7 @@
               <p>Start your day, fight stress and wind down with herbs</p>
             </figcaption>
           </figure>
-        </div>
-        <div class="support-card">
-          <figure>
+          <figure class="support-card-figure">
             <img
               loading="lazy"
               src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_5.webp"
@@ -424,9 +473,7 @@
               <p>Add tinctures to your daily tea/coffee for a herbal boost</p>
             </figcaption>
           </figure>
-        </div>
-        <div class="support-card">
-          <figure>
+          <figure class="support-card-figure">
             <img
               loading="lazy"
               src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_6.webp"
@@ -436,9 +483,8 @@
               <p>Keep our tinctures in your bag for on-the-go support</p>
             </figcaption>
           </figure>
-        </div>
-        <div class="support-card">
-          <figure>
+
+          <figure class="support-card-figure">
             <img
               loading="lazy"
               src="./assets/images/Usage-suggestions/Anxiety_Rescue_Bundle_-_PDP_-_7.webp"
@@ -452,261 +498,103 @@
           </figure>
         </div>
       </section>
-      <!-- Newsletter Signup -->
+      <!-- Newsletter Sign-up -->
       <section class="newsletter">
-        <div class="sign-up-image">
-          <img
-            loading="lazy"
-            src="./assets//images/sign-up-bg-img/Sleep-Rescue-Bundle---PDP---9_94d4997d-d328-4c4c-945a-f89faa36efa8.webp"
-            alt="sign up image"
-          />
-        </div>
-        <form class="form">
+        <img
+          class="sign-up-image"
+          loading="lazy"
+          src="./assets//images/sign-up-bg-img/Sleep-Rescue-Bundle---PDP---9_94d4997d-d328-4c4c-945a-f89faa36efa8.webp"
+          alt="sign up image"
+        />
+        <form class="sign-up-form">
           <h2>Sign up to our newsletter to get 15% off</h2>
           <div class="form-group">
-            <label for="username">Name</label>
-            <input type="text" required name="username" id="username" />
+            <label for="username">
+              <input
+                type="text"
+                required
+                name="username"
+                placeholder="Name"
+                id="username"
+              />
+            </label>
           </div>
           <div class="form-group">
-            <label for="user-email">Email</label>
-            <input type="text" required name="user-email" id="user-email" />
+            <label for="user-email">
+              <input
+                type="text"
+                required
+                name="user-email"
+                placeholder="Email"
+                id="user-email"
+              />
+            </label>
           </div>
           <button type="submit">Submit</button>
         </form>
       </section>
-      <!-- Discounted Bundles -->
-      <section class="discount-bundles">
-        <h2>Save <span>10%</span> with bundles</h2>
-        <div class="products-list">
-          <div class="product-item">
-            <img
-              loading="lazy"
-              src="./assets/images/discount-items/AnxietyRescueBundle-PDP-3_cddfd8c4-331e-4626-8530-31e26ac89b03.webp"
-              alt="Anxiety Rescue Bundle"
-            />
-            <p class="product-name">Anxiety Rescue Bundle</p>
-            <span class="price">550,00zl</span>
-          </div>
-          <div class="product-item">
-            <img
-              loading="lazy"
-              src="./assets/images/discount-items/GutRescueBundle-PlantstotheRescue-4.webp"
-              alt="Gut Rescue Bundle"
-            />
-            <p class="product-name">Gut Rescue Bundle</p>
-            <span class="price">520,00zl</span>
-          </div>
-          <div class="product-item">
-            <img
-              loading="lazy"
-              src="./assets/images/discount-items/SleepRescueBundle-PDP-5_9f3bb5bf-f919-42c4-8df9-bd81c5e244c2.webp"
-              alt="Sleep Rescue Bundle"
-            />
-            <p class="product-name">Sleep Rescue Bundle</p>
-            <span class="price">550,00zl</span>
-          </div>
-          <div class="product-item">
-            <img
-              loading="lazy"
-              src="./assets/images/discount-items/TheFullKit-PDP-2_0f6370fa-cc1d-4b87-996d-748ff686d395.webp"
-              alt="The Full Kit"
-            />
-            <p class="product-name">The Rescue Bundle</p>
-            <span class="price">550,00zl</span>
-          </div>
-        </div>
-      </section>
-      <!-- Promo Banner -->
-      <section class="promo-banner">
-        <img
-          loading="lazy"
-          src="./assets/images/banner/Gift_Card_-_PDP_-_45.webp"
-          alt="Gift_Card"
-        />
-        <div class="banner-content">
-          <h2>Free Shipping above £50</h2>
-          <button>Shop now</button>
-        </div>
-      </section>
-      <!-- FAQs -->
-      <section class="faq">
-        <h2>FAQs</h2>
-        <details class="faq-details">
-          <summary class="faq-summery">
-            <img
-              loading="lazy"
-              class="faq-image"
-              src="./assets/images/FAQs/Alcoholic_-_1.avif"
-              alt="Alcoholic"
-            />
-            <p class="faq-summery-content">Are your tinctures alcohol free?</p>
-          </summary>
-          <p>
-            Yes! I've struggled with alcohol intolerance since I was in my early
-            20s and found it extremely frustrating that most tinctures I found
-            on the market were alcohol based. I wanted to use herbs in the
-            tincture form for maximum bioavailability but it has always been a
-            struggle to find alcohol free tinctures. Not anymore! We got a
-            Master Herbalist on board and he made sure that our tinctures
-            deliver all of the benefits of alcohol based tinctures, without the
-            strong taste (or alcohol). Also, this way, we are mindful of
-            everyone who can't have alcohol-based tinctures because of health
-            issues, addiction issues or religious beliefs. Inclusivity! Yey!
-          </p>
-        </details>
-        <details class="faq-details">
-          <summary class="faq-summery">
-            <img
-              loading="lazy"
-              class="faq-image"
-              src="./assets/images/FAQs/Combination---4.webp"
-              alt="Combination"
-            />
-
-            <p class="faq-summery-content">Can I combine tinctures?</p>
-          </summary>
-          <p>
-            Yes - feel free to mix and match our tinctures—they're crafted to
-            complement each other seamlessly!
-          </p>
-        </details>
-        <details class="faq-details">
-          <summary class="faq-summery">
-            <img
-              loading="lazy"
-              class="faq-image"
-              src="./assets/images/FAQs/Discount_-_1.avif"
-              alt="Discount"
-            />
-            <p class="faq-summery-content">Do you ever offer discounts?</p>
-          </summary>
-          <p>
-            Yes we sure do! For the inside scoop on all our discounts, join our
-            newsletter community!
-          </p>
-        </details>
-        <details class="faq-details">
-          <summary class="faq-summery">
-            <img
-              loading="lazy"
-              class="faq-image"
-              src="./assets/images/FAQs/No-synthetic-flavours---5.webp"
-              alt="No synthetic flavours"
-            />
-            <p class="faq-summery-content">How should I take tinctures?</p>
-          </summary>
-          <p>
-            For optimal absorption, place the recommended dose under your tongue
-            (sublingually) and hold it there for about 30 seconds to a minute
-            before swallowing. This allows the active compounds to be absorbed
-            directly into the bloodstream. If the taste is too intense, you can
-            mix the tincture with a beverage like water, juice, or tea.
-            Consistency is key.
-          </p>
-        </details>
-        <details class="FAQ">
-          <summary class="FAQ-summery">
-            <img
-              loading="lazy"
-              class="FAQ-image"
-              src="./assets/images/FAQs/Taste_-_1.webp"
-              alt="Taste"
-            />
-            <p class="faq-summery-content">How do the tinctures taste?</p>
-          </summary>
-          <p>
-            All our tinctures are alcohol free. These have a naturally sweet
-            herbal taste and a syrupy consistency. They're made with organic
-            non-palm glycerine that naturally has a low glycemic index, which
-            gives them a sweet flavour.
-          </p>
-        </details>
-      </section>
-      <!-- Social Showcase -->
-      <section class="social-showcase">
-        <h2>@purelyplantful.co</h2>
-
-        <div class="showcase-item">
-          <img
-            loading="lazy"
-            src="./assets/images/posts/Instagram_post_-_133.webp"
-            alt="Instagram post showcasing herbal tinctures"
-          />
-        </div>
-        <div class="showcase-item">
-          <img
-            loading="lazy"
-            src="./assets/images/posts/Instagram_post_-_60.webp"
-            alt="Instagram post featuring wellness products"
-          />
-        </div>
-        <div class="showcase-item">
-          <img
-            loading="lazy"
-            src="./assets/images/posts/Instagram_post_-_89.webp"
-            alt="Instagram post promoting organic herbs"
-          />
-        </div>
-        <div class="showcase-item">
-          <img
-            loading="lazy"
-            src="./assets/images/posts/Instagram_post_-_132.webp"
-            alt="Instagram post highlighting customer reviews"
-          />
-        </div>
-      </section>
     </main>
-
     <!-- Footer -->
     <footer class="footer-wrapper">
       <div class="footer-block footer-block-newslatter">
-        <p class="footer-content">
-          Sign up for 15% off your first order & exclusive access to seasonal
-          deals.
-        </p>
         <form class="form subscription-form" id="subscription-form">
+          <h2 class="footer-content">
+            Sign up for 15% off your first order & exclusive access to seasonal
+            deals.
+          </h2>
           <div class="form-group">
-            <label for="username">Name</label>
-            <input type="text" name="username" required />
+            <label for="username">
+              <input type="text" name="username" required placeholder="Name" />
+            </label>
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
-            <input type="text" name="user-email" required />
+            <label for="email">
+              <input
+                type="text"
+                placeholder="Email"
+                name="user-email"
+                required
+              />
+            </label>
           </div>
           <button type="submit" class="btn subscribe-btn">Subscribe</button>
         </form>
       </div>
-      <div class="footer-block social-group">
-        <img
-          loading="lazy"
-          src="./assets/icons/social-media-icons/fb.svg"
-          alt="facebook"
-          width="30"
-          height="30"
-        />
-        <img
-          loading="lazy"
-          src="./assets/icons/social-media-icons/instagram.svg"
-          alt="instagram"
-          width="30"
-          height="30"
-        />
-        <img
-          loading="lazy"
-          src="./assets/icons/social-media-icons/pinterest.svg"
-          alt="pinterest"
-          width="30"
-          height="30"
-        />
-        <img
-          loading="lazy"
-          src="./assets/icons/social-media-icons/tiktok.svg"
-          alt="tiktok"
-          width="30"
-          height="30"
-        />
+      <div class="footer-block footer-social-group">
+        <span>Social</span>
+        <div class="social-icons">
+          <img
+            loading="lazy"
+            src="./assets/icons/social-media-icons/fb.svg"
+            alt="facebook"
+            width="30"
+            height="30"
+          />
+          <img
+            loading="lazy"
+            src="./assets/icons/social-media-icons/instagram.svg"
+            alt="instagram"
+            width="30"
+            height="30"
+          />
+          <img
+            loading="lazy"
+            src="./assets/icons/social-media-icons/pinterest.svg"
+            alt="pinterest"
+            width="30"
+            height="30"
+          />
+          <img
+            loading="lazy"
+            src="./assets/icons/social-media-icons/tiktok.svg"
+            alt="tiktok"
+            width="30"
+            height="30"
+          />
+        </div>
       </div>
-      <div class="footer-block information">
+      <div class="footer-block-information">
+        <span>Information</span>
         <ul>
           <li><a href="#">About</a></li>
           <li><a href="#">Contact</a></li>
