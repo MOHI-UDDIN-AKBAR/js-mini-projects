@@ -1,24 +1,8 @@
 body {
-  font-family: var(--font-main);
-  /* font-size: var(--font-base-size); */
+  font-family: var(--font-secondary);
   line-height: 1.6;
-  color: var(--primary-text);
-  background-color: var(--primary-bg-color);
-}
-
-.flex-announcement {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  border: 2px solid blue;
-}
-
-.flex-announcement-list {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 3rem;
-  border: 2px solid blue;
+  color: var(--color-primary);
+  background-color: var(--color-bg-primary);
+  max-width: var(--container-max-width);
+  margin: 0 auto;
 }
