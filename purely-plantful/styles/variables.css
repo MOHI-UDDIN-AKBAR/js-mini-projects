@@ -1,38 +1,45 @@
 :root {
-  /* Colors  */
-  --primary-color: red;
-  --secondary-color: blue;
-  --accent-color: green;
-  --primary-text: #503217;
-  --secondary-text: #edece6;
-  --accent-text: green;
-  --ring-color: #877460;
-  --primary-bg-color: #eeede7;
-  --secondary-bg-color: #503217;
-  --accent-bg-color: blue;
+  /* COLOR SYSTEM */
+  --color-primary: #503217;
+  --color-secondary: #7f6a55;
+  --color-accent: #a1ced1;
 
-  /* Typography  */
-  --font-main: apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: "Arial", sans-serif;
-  --font-size-base: 1rem;
-  --font-size-desktop: 1.1rem;
-  --font-size-mobile: 0.9rem;
+  --color-bg-primary: #eeede7;
+  --color-bg-secondary: #503217;
+  --color-bg-accent: #a1ced1;
 
-  /* Spacing  */
-  --spacing-unit: 1rem;
-  --container-max-width: 1200px;
+  --color-border: #877460;
+  --color-light: #ffffff;
+  --color-dark: #000000;
+
+  /* TYPOGRAPHY */
+  --font-primary: "EB Garamond", serif;
+  --font-secondary: "Inter", sans-serif;
+  --font-logo: "Lilita One", cursive;
+
+  --text-base-size: 1rem;
+  --text-small: 0.875rem;
+  --text-large: 1.25rem;
+
+  /* SPACING & LAYOUT */
   --spacing-xs: 0.25rem;
   --spacing-sm: 0.5rem;
   --spacing-md: 1rem;
   --spacing-lg: 2rem;
+  --spacing-xl: 4rem;
 
-  /* Misc */
-  --radius: 0.5rem;
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
 
-  /* Break-Points  */
-  --mobile-device: 480px;
-  --tablet-device-min: 481px;
-  --tablet-device-min: 1024px;
-  --desktop-device-min: 1025px;
-  --desktop-device-min: 1280px;
+  --container-max-width: 1200px;
+
+  /* BREAKPOINTS */
+  --bp-mobile: 480px;
+  --bp-tablet: 768px;
+  --bp-laptop: 1024px;
+  --bp-desktop: 1280px;
+
+  /* MISC */
+  --transition-default: all 0.3s ease-in-out;
 }
